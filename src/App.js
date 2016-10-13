@@ -23,7 +23,7 @@ class App extends Component {
         <p className="App-intro">
           Click the Button Below!
         </p>
-        <ClickMeButton action={this.incrementCounter.bind(this)}></ClickMeButton>
+        <ClickMeButton action={this.incrementCounter.bind(this)} doubleValue={this.state.counter * 2}></ClickMeButton>
       </div>
     );
   }
@@ -33,6 +33,7 @@ class ClickMeButton extends Component {
   render () {
     return (
       <div>
+      <h2>Double! {this.props.doubleValue}</h2>
       <button onClick={this.props.action}>Click Me!</button>
       </div>
     )
